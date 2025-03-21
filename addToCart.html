@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Comm Website</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  
+<!-- .............................NavBar Code START........................................... -->
+
+  <header class="section-navbar">
+    <section class="top_txt">
+      <div class="head container">
+        <div class="head_txt">
+          <p>Free Shopping, 30-days return or refund guarantee.</p>
+        </div>
+        <div class="sing_in_up">
+          <a href="#">SIGN IN</a>
+          <a href="#">SIGN UP</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="public/images/logoo.png" alt="Shree eCommerce logo" class="logo" width="auto" height="auto" />
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a href="/" class="nav-link"> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"> About</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link"> Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"> Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="/addToCart.html" class="nav-link add-to-cart-button" id="cartValue"> 
+              <i class="fa-solid fa-cart-shopping">&nbsp; 0</i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!-- .............................NavBar Code START........................................... -->
+
+
+
+<section class="addToCartElement">
+    <div class="container">
+        <section>
+            <div id="productCartContainer">
+
+            </div>
+        </section>
+
+        <section class="productCartTotalElem">
+            <div class="productCartTotalElement">
+                <p>Selected Offer Summary</p>
+                <div class="productOrderTotal">
+                    <div>
+                        <p>Sub Total: </p>
+                        <p class="productSubTotal">0</p>
+                    </div>
+                    <div>
+                        <p>Tax :</p>
+                        <p class="productTax">₹50</p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p>Final Total : </p>
+                        <p class="productFinalTotal">0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</section>
+
+
+<!-- Template For  a Product  Start-->
+
+<template id="productCartTemplate">
+    <div class="cards" id="cardValue">
+        <article class="information [ card ]">
+            <div>
+                <span class="category"></span>
+            </div>
+            <div class="imageContainer">
+                <img class="productImage" src="" alt="" />
+            </div>
+
+            <h2 class="productName"></h2>
+
+            <p class="productPrice"></p>
+
+            <div class="stockElement">
+                <button class="cartIncrement">+</button>
+                <p class="productQuantity" data-quantity="1">1</p>
+                <button class="cartDecrement">-</button>
+            </div>
+
+            <button class="add-to-cart-button remove-to-cart-button">Remove</button>
+        </article>
+    </div>
+</template>
+
+<!-- Template For  a Product  Start-->
+
+
+   <!-- ..............................Footer section Start.................................... -->
+
+
+   <footer class="section-footer">
+    <div class="footer-container container">
+      <div class="content_1">
+        <img src="public/images/logoo.png" alt="">
+        <p>Welcome to MyStore ECommStore, your ultimate destination for cutting-edge gadgets!</p>
+        <img src="public/images/PaymentOptions.png" alt="Payment Options" class="Payament">
+      </div>
+      <div class="content_2">
+        <h4>SHOPPING</h4>
+        <a href="">Computer Store</a>
+        <a href="">Laptop Store</a>
+        <a href="#">Accessories</a>
+        <a href="#">Sales & Discount</a>
+      </div>
+
+      <div class="content_3">
+        <h4>Experience</h4>
+        <a href="#">Contact Us</a>
+        <a href="#" target="_blank">Payment Method</a>
+        <a href="#" target="_blank">Delivery</a>
+        <a href="#" target="_blank">Return and Exchange</a>
+      </div>
+
+      <div class="content_4">
+        <h4>NEWSLETTER</h4>
+        <P>Be the first to know about <br/>arrivals,sales & promos!</P>
+        <div class="f-email">
+          <input type="email" placeholder="Enter email"/>
+          <i class="bx bx-envelope"></i>
+        </div>
+        <hr/>
+      </div>
+    </div>
+
+    <div class="f-design">
+      <div class="f-design-txt">
+        <p>Design and Code by Chandrakant Gaikwad</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- ..............................Footer section End.................................... -->
+
+
+<script type="module" src="showAddToCartCards.js"></script>
+</body>
+</html>
